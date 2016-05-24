@@ -1,3 +1,4 @@
+package kata;
 /**
  * 
  */
@@ -51,4 +52,9 @@ public class StringCalculatorTest {
 		assertEquals(21, stringCalculator.add(REGEX_MULTILINE));
 	}
 	
+	@Test
+	public void ValueChoiceSeparatorTest(){
+		
+		assertEquals(6, stringCalculator.add("//:1:2:3"));
+	}
 }
