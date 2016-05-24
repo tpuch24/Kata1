@@ -17,7 +17,7 @@ public class StringCalculator {
 		
 		if (numbers.length()==0) return 0;
 		
-		String[] retval = numbers.split(",");
+		String[] retval = numbers.split(",|\\n");
 		for(String str: retval)
 		{
 			res+= Integer.parseInt(str);
