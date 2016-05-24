@@ -44,9 +44,11 @@ public class StringCalculatorTest {
 		
 		assertEquals(21, stringCalculator.add("1,2,3,4,5,6"));
 	}
+	
 	@Test
 	public void ValueForMultipleLineStringTest(){
 		
 		assertEquals(21, stringCalculator.add(REGEX_MULTILINE));
 	}
+	
 }
