@@ -12,6 +12,7 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 	
+	private static final String STRING_WITH_BIGGER_1000 = "3,1001,2";
 	private static final String SeparatorChoiceTest = "//:\n1:2:3";
 	private static final String REGEX_MULTILINE = "1,2,3\n4,5,6";
 	private static final String TWO_INT_VALUES_STRING = "1,2";
@@ -57,5 +58,11 @@ public class StringCalculatorTest {
 	public void ValueChoiceSeparatorTest(){
 		
 		assertEquals(6, stringCalculator.add(SeparatorChoiceTest));
+	}
+	
+	@Test
+	public void ValueNegativeTest(){
+		
+		assertEquals(5, stringCalculator.add(STRING_WITH_BIGGER_1000));
 	}
 }

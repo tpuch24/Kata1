@@ -38,7 +38,9 @@ public class StringCalculator {
 		String[] retval = numbers.split(localRegex);
 		for(String str: retval)
 		{
-			res+= Integer.parseInt(str);
+			int nextValue = Integer.parseInt(str);
+
+			if ((nextValue>=0)&&(nextValue<=1000)) res+= nextValue;
 		}
 		return res;
 	}
