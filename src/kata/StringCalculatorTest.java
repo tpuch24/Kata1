@@ -12,6 +12,7 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 	
+	private static final String SeparatorChoiceTest = "//:\n1:2:3";
 	private static final String REGEX_MULTILINE = "1,2,3\n4,5,6";
 	private static final String TWO_INT_VALUES_STRING = "1,2";
 	private static final String ONE_INT_VALUE_STRING = "8";
@@ -55,6 +56,6 @@ public class StringCalculatorTest {
 	@Test
 	public void ValueChoiceSeparatorTest(){
 		
-		assertEquals(6, stringCalculator.add("//:1:2:3"));
+		assertEquals(6, stringCalculator.add(SeparatorChoiceTest));
 	}
 }

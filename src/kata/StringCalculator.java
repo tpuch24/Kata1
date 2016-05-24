@@ -26,11 +26,13 @@ public class StringCalculator {
 		//To found new regex
 		//Look for // in firsts positions
 		StringBuffer stringBuffer = new StringBuffer(numbers);
-		if (stringBuffer.subSequence(0, 1)=="//"){
-			int firstNewlinePosition= numbers.indexOf("\n");
-			if  (firstNewlinePosition>1) {
-				localRegex = (String) stringBuffer.subSequence(3, 3);
-			}			
+
+		if (numbers.indexOf("//")==0)
+		{
+			if  (numbers.indexOf("\n")==3) {
+				localRegex = stringBuffer.substring(2, 3);
+				numbers = stringBuffer.substring(4,numbers.length());
+			}
 		}
 	
 		String[] retval = numbers.split(localRegex);
